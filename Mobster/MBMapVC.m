@@ -7,17 +7,22 @@
 //
 
 #import "MBMapVC.h"
+#import <WYPopoverController/WYPopoverController.h>
 #import "MBUserMenuVC.h"
 #import "MBChatMessage.h"
+#import "MarkerPopupVC.h"
+#import "ProgressHUD.h"
 
-@interface MBMapVC () <GMSMapViewDelegate>
-@property (weak,nonatomic) IBOutlet GMSMapView * mapView;
+
+@interface MBMapVC () <GMSMapViewDelegate, WYPopoverControllerDelegate>
+@property (strong,nonatomic) IBOutlet UIView * mapViewContainer;
 @property (weak,nonatomic) IBOutlet UIButton * burgerButton;
 @property (weak,nonatomic) IBOutlet UIButton * userButton;
 @property (strong,nonatomic) CLLocationManager * locationManager;
 @property (strong,nonatomic) NSMutableDictionary * users;
 @property (strong,nonatomic) NSMutableDictionary * markers;
-
+@property (strong,nonatomic) NSMutableArray * flagMarkers;
+@property (strong,nonatomic) GMSMapView * mapView;
 @end
 
 
@@ -28,6 +33,8 @@
     BOOL firstLocationUpdate_;
     MBUserMenuVC * chatVC;
     MBSocketController * socketController;
+    WYPopoverController* popoverController;
+    CLLocationCoordinate2D currentCoordinate;
     
 }
 
@@ -35,10 +42,11 @@
 - (void)viewDidLoad {
     // Create a GMSCameraPosition that tells the map to display the
     // coordinate -33.86,151.20 at zoom level 6.
-    socketController = [[MBSocketController alloc] init];
-    socketController.delegate = self;
+//    socketController = [[MBSocketController alloc] init];
+//    socketController.delegate = self;
     self.socketController = socketController;
     chatVC = (MBUserMenuVC*) self.revealViewController.rearViewController;
+    self.mapView = [[GMSMapView alloc] initWithFrame:self.mapViewContainer.frame];
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
                                                             longitude:151.20
@@ -47,13 +55,14 @@
     self.mapView.settings.compassButton = YES;
     self.mapView.settings.myLocationButton = YES;
     self.mapView.myLocationEnabled = YES;
+    self.mapView.delegate = self;
     
     [self.mapView addObserver:self
                forKeyPath:@"myLocation"
                   options:NSKeyValueObservingOptionNew
                   context:NULL];
     // Creates a marker in the center of the map.
-
+    [self.mapViewContainer addSubview:self.mapView];
     
     self.locationManager = [[CLLocationManager alloc] init];
     [self.locationManager setDelegate:self];
@@ -89,14 +98,21 @@
     }
     return _markers;
 }
-
+- (NSMutableArray *) flagMarkers
+{
+    if (!_flagMarkers) {
+        _flagMarkers = [NSMutableArray new];
+    }
+    return _flagMarkers;
+}
 
 
 #pragma mark - CLLocationMangerDelegate
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    
+    CLLocation * location =[locations lastObject];
+    currentCoordinate = location.coordinate;
 }
 
 
@@ -186,6 +202,7 @@
         }
     }
     if ([eventName isEqualToString:CHAT_EVENT_NAME]) {
+        
         NSDictionary * userDict = userDicts[0];
         MBChatMessage * chatMessage = [[MBChatMessage alloc] init];
         chatMessage.fromUser = (MBUser*)[self.users valueForKey:@"12"];//TODO:change to actual userID from corrected chat event
@@ -193,6 +210,7 @@
         chatMessage.timestamp = [NSDate date];
         chatMessage.other = YES;
         [chatVC didReceiveChatMessage:chatMessage];
+        [ProgressHUD show:chatMessage.message];
     }
     if ([eventName isEqualToString:NEW_USER_EVENT_NAME]) {
         NSDictionary * userDict = userDicts[0];
@@ -227,8 +245,93 @@
 
 - (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
+    [self showPopover:marker];
     return TRUE;
 }
 
+- (void) addMarkerOfType: (MBMarkerType) markerType;
+{
+    NSString * imageName;
+    switch (markerType) {
+        case MBMarkerTypeHot:
+            imageName = @"fireMarkerBig";
+            break;
+        case MBMarkerTypeEmergency:
+            imageName = @"emergencyMarkerBig";
+            break;
+        case MBMarkerTypePolice:
+            imageName = @"policeMarkerBig";
+            break;
+        default:
+            imageName = @"genericmarkerBig";
+            break;
+    }
+    
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = currentCoordinate;
+    marker.icon = [UIImage imageNamed:imageName];
+    marker.appearAnimation = kGMSMarkerAnimationPop;
+    marker.tappable = NO;
+    marker.map = self.mapView;
+    [self.flagMarkers addObject:marker];
+    
+}
+
+- (void)showPopover:(id)sender
+{
+    if ([sender isKindOfClass:[GMSMarker class]]){
+        GMSMarker * marker = (GMSMarker*)sender;
+        [self setupPopoverAppearance];
+        MarkerPopupVC * markerPopUp = [[MarkerPopupVC alloc] initWithNibName:@"markerPopup" bundle:nil];
+        popoverController = [[WYPopoverController alloc] initWithContentViewController:markerPopUp];
+        popoverController.delegate = self;
+        UIView * anchorView = [[UIView alloc] initWithFrame:marker.layer.frame];
+        [popoverController setPopoverContentSize:CGSizeMake(150.f, 80.f)];
+        [popoverController presentPopoverFromRect:marker.layer.frame inView:anchorView permittedArrowDirections:WYPopoverArrowDirectionAny animated:YES];
+    }
+}
+
+- (BOOL)popoverControllerShouldDismissPopover:(WYPopoverController *)controller
+{
+    return YES;
+}
+
+- (void)popoverControllerDidDismissPopover:(WYPopoverController *)controller
+{
+    popoverController.delegate = nil;
+    popoverController = nil;
+}
+
+- (void) setupPopoverAppearance
+{
+    UIColor *greenColor =
+    [UIColor colorWithRed:0.919 green:0.537 blue:0.204 alpha:1.000];
+    
+    [WYPopoverController setDefaultTheme:[WYPopoverTheme theme]];
+    
+    WYPopoverBackgroundView *popoverAppearance = [WYPopoverBackgroundView appearance];
+    
+    [popoverAppearance setOuterCornerRadius:4];
+    [popoverAppearance setOuterShadowBlurRadius:0];
+    [popoverAppearance setOuterShadowColor:[UIColor clearColor]];
+    [popoverAppearance setOuterShadowOffset:CGSizeMake(0, 0)];
+    
+    [popoverAppearance setGlossShadowColor:[UIColor clearColor]];
+    [popoverAppearance setGlossShadowOffset:CGSizeMake(0, 0)];
+    
+    [popoverAppearance setBorderWidth:8];
+    [popoverAppearance setArrowHeight:10];
+    [popoverAppearance setArrowBase:20];
+    
+    [popoverAppearance setInnerCornerRadius:4];
+    [popoverAppearance setInnerShadowBlurRadius:0];
+    [popoverAppearance setInnerShadowColor:[UIColor clearColor]];
+    [popoverAppearance setInnerShadowOffset:CGSizeMake(0, 0)];
+    
+    [popoverAppearance setFillTopColor:greenColor];
+    [popoverAppearance setFillBottomColor:greenColor];
+    [popoverAppearance setOuterStrokeColor:greenColor];
+    [popoverAppearance setInnerStrokeColor:greenColor];
+}
 
 @end

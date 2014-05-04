@@ -29,6 +29,9 @@
 		B036C38D190A05B100275B07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036C38C190A05B100275B07 /* CoreLocation.framework */; };
 		B04BE6BD19156213005A5CDF /* MBSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = B04BE6BC19156213005A5CDF /* MBSocketController.m */; };
 		B04BE6C11915ABAA005A5CDF /* YSShadedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B04BE6C01915ABAA005A5CDF /* YSShadedButton.m */; };
+		B0895D96191660AD00065755 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B0895D95191660AD00065755 /* ProgressHUD.m */; };
+		B0895D9A191667DB00065755 /* markerPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0895D99191667DB00065755 /* markerPopup.xib */; };
+		B0895D9D1916689800065755 /* MarkerPopupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B0895D9C1916689800065755 /* MarkerPopupVC.m */; };
 		B0D746871915F8A700592A6B /* MBChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D746861915F8A700592A6B /* MBChatMessage.m */; };
 		B0D7468E1915FB4D00592A6B /* MBChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D7468D1915FB4D00592A6B /* MBChatTableViewCell.m */; };
 		B0FC97F7191538DC006EE48B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC97F6191538DC006EE48B /* AVFoundation.framework */; };
@@ -97,6 +100,11 @@
 		B04BE6BE191564FC005A5CDF /* MBDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBDefinitions.h; sourceTree = "<group>"; };
 		B04BE6BF1915ABAA005A5CDF /* YSShadedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSShadedButton.h; sourceTree = "<group>"; };
 		B04BE6C01915ABAA005A5CDF /* YSShadedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSShadedButton.m; sourceTree = "<group>"; };
+		B0895D94191660AD00065755 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		B0895D95191660AD00065755 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		B0895D99191667DB00065755 /* markerPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = markerPopup.xib; sourceTree = "<group>"; };
+		B0895D9B1916689800065755 /* MarkerPopupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerPopupVC.h; sourceTree = "<group>"; };
+		B0895D9C1916689800065755 /* MarkerPopupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerPopupVC.m; sourceTree = "<group>"; };
 		B0D746851915F8A700592A6B /* MBChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatMessage.h; sourceTree = "<group>"; };
 		B0D746861915F8A700592A6B /* MBChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatMessage.m; sourceTree = "<group>"; };
 		B0D7468C1915FB4D00592A6B /* MBChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatTableViewCell.h; sourceTree = "<group>"; };
@@ -296,10 +304,15 @@
 		B0D7468B1915FAC800592A6B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B0895D94191660AD00065755 /* ProgressHUD.h */,
+				B0895D95191660AD00065755 /* ProgressHUD.m */,
 				B0D7468C1915FB4D00592A6B /* MBChatTableViewCell.h */,
 				B0D7468D1915FB4D00592A6B /* MBChatTableViewCell.m */,
 				B04BE6BF1915ABAA005A5CDF /* YSShadedButton.h */,
 				B04BE6C01915ABAA005A5CDF /* YSShadedButton.m */,
+				B0895D99191667DB00065755 /* markerPopup.xib */,
+				B0895D9B1916689800065755 /* MarkerPopupVC.h */,
+				B0895D9C1916689800065755 /* MarkerPopupVC.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -387,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B036C35E1909FC9200275B07 /* Images.xcassets in Resources */,
+				B0895D9A191667DB00065755 /* markerPopup.xib in Resources */,
 				B036C3501909FC9200275B07 /* InfoPlist.strings in Resources */,
 				B036C3591909FC9200275B07 /* Main.storyboard in Resources */,
 				B0FC9813191542D8006EE48B /* GoogleMaps.bundle in Resources */,
@@ -450,9 +464,11 @@
 				B04BE6BD19156213005A5CDF /* MBSocketController.m in Sources */,
 				B036C3561909FC9200275B07 /* MBAppDelegate.m in Sources */,
 				B036C37C1909FCBC00275B07 /* SWRevealViewController.m in Sources */,
+				B0895D9D1916689800065755 /* MarkerPopupVC.m in Sources */,
 				B0D7468E1915FB4D00592A6B /* MBChatTableViewCell.m in Sources */,
 				B036C3861909FF8900275B07 /* MBActionsMenuVC.m in Sources */,
 				B0FC9818191556A1006EE48B /* MBUser.m in Sources */,
+				B0895D96191660AD00065755 /* ProgressHUD.m in Sources */,
 				B0D746871915F8A700592A6B /* MBChatMessage.m in Sources */,
 				B036C3801909FEB500275B07 /* MBMapVC.m in Sources */,
 			);

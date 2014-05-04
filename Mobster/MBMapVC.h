@@ -11,7 +11,16 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MBSocketController.h"
 
+typedef enum {
+    MBMarkerTypeHot = 0,
+    MBMarkerTypePolice,
+    MBMarkerTypeEmergency
+} MBMarkerType;
+
+
 @interface MBMapVC : MBSuperVC <CLLocationManagerDelegate,MBSocketControllerDelegate>
 
 @property (strong, nonatomic) MBSocketController * socketController;
+
+- (void) addMarkerOfType: (MBMarkerType) markerType;
 @end

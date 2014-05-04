@@ -7,17 +7,22 @@
 //
 
 #import "MBActionsMenuVC.h"
+#import "MBMapVC.h"
 
 @interface MBActionsMenuVC ()
 
 @end
 
 @implementation MBActionsMenuVC
+{
+    MBMapVC * mapVC;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    mapVC =(MBMapVC*) [self.revealViewController frontViewController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,9 +31,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) setMarker
+- (IBAction)setMarker: (UIButton*) sender
 {
-    
+    [mapVC addMarkerOfType:sender.tag];
 }
 
 @end

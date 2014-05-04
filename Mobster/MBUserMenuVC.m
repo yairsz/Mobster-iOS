@@ -93,8 +93,8 @@
 {
     if (self.messageTextField.text > 0) {
         MBMapVC * mapVC =(MBMapVC*) self.revealViewController.frontViewController;
-        NSString * message = [NSString stringWithFormat:@"rmypjciv : %@",self.messageTextField.text];
-        [mapVC.socketController sendChatMessageWithData:@{@"msg":message}];
+        NSString * message = self.messageTextField.text;
+        [mapVC.socketController sendChatMessageWithData:@{@"msg":message,USERNAME_KEY:@"rmypjciv"}];
     }
 }
 #pragma mark respond to keyboard notifications
