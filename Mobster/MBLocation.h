@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface MBLocation : NSObject
+/**
+ * Coordinate pair: Latitude, Longitude
+ **/
+@property (nonatomic) CGFloat latitude;
+@property (nonatomic) CGFloat longitude;
+@property (nonatomic) CLLocationCoordinate2D coordinate2D;
+@property (strong,nonatomic) NSDate * timestamp;
 
+
+- (MBLocation *) initWithLat:(CGFloat) lat lon:(CGFloat)lon;
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBActionsMenuVC : UIViewController
+@interface MBActionsMenuVC : MBSuperVC
 
 @end

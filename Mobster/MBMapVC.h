@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
+#import <CoreLocation/CoreLocation.h>
+#import "MBSocketController.h"
 
-@interface MBMapViewController : UIViewController
+@interface MBMapVC : MBSuperVC <CLLocationManagerDelegate,MBSocketControllerDelegate>
 
+@property (strong, nonatomic) MBSocketController * socketController;
 @end

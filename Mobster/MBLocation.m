@@ -10,4 +10,28 @@
 
 @implementation MBLocation
 
+- (MBLocation *) initWithLat:(CGFloat) lat lon:(CGFloat)lon
+{
+    if (self = [super init]){
+        _latitude = lat;
+        _longitude = lon;
+        
+    }
+    return self;
+}
+
+- (CLLocationCoordinate2D) coordinate2D
+{
+    return CLLocationCoordinate2DMake(self.latitude, self.longitude);
+}
+
+
+- (NSString *) description
+{
+    NSMutableString * descriptionString = [NSMutableString new];
+    [descriptionString appendFormat:@"%f\n",self.latitude];
+    [descriptionString appendFormat:@"%f\n",self.longitude];
+    return  descriptionString;
+}
+
 @end

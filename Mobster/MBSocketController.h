@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <socket.IO/SocketIO.h>
+
+@protocol MBSocketControllerDelegate <NSObject>
+
+- (void) didRecieveEvent:(NSString *) eventName withData:(NSDictionary *) data;
+
+@end
 
 @interface MBSocketController : NSObject
+
+@property (nonatomic, strong) SocketIO *socketIO;
+@property (unsafe_unretained) id <MBSocketControllerDelegate> delegate;
+
+- (void) sendChatMessageWithData:(NSDictionary*) data;
 
 @end

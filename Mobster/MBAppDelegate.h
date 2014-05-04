@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBSocketController.h"
 
 @interface MBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

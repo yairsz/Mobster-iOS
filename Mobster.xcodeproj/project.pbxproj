@@ -21,6 +21,32 @@
 		B036C3671909FC9200275B07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036C3491909FC9200275B07 /* UIKit.framework */; };
 		B036C36F1909FC9200275B07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B036C36D1909FC9200275B07 /* InfoPlist.strings */; };
 		B036C3711909FC9200275B07 /* MobsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B036C3701909FC9200275B07 /* MobsterTests.m */; };
+		B036C37C1909FCBC00275B07 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B036C37B1909FCBC00275B07 /* SWRevealViewController.m */; };
+		B036C3801909FEB500275B07 /* MBMapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B036C37F1909FEB500275B07 /* MBMapVC.m */; };
+		B036C3831909FEE800275B07 /* MBSuperVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B036C3821909FEE800275B07 /* MBSuperVC.m */; };
+		B036C3861909FF8900275B07 /* MBActionsMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B036C3851909FF8900275B07 /* MBActionsMenuVC.m */; };
+		B036C3891909FFC000275B07 /* MBUserMenuVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B036C3881909FFC000275B07 /* MBUserMenuVC.m */; };
+		B036C38D190A05B100275B07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B036C38C190A05B100275B07 /* CoreLocation.framework */; };
+		B04BE6BD19156213005A5CDF /* MBSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = B04BE6BC19156213005A5CDF /* MBSocketController.m */; };
+		B04BE6C11915ABAA005A5CDF /* YSShadedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B04BE6C01915ABAA005A5CDF /* YSShadedButton.m */; };
+		B0D746871915F8A700592A6B /* MBChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D746861915F8A700592A6B /* MBChatMessage.m */; };
+		B0D7468E1915FB4D00592A6B /* MBChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D7468D1915FB4D00592A6B /* MBChatTableViewCell.m */; };
+		B0FC97F7191538DC006EE48B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC97F6191538DC006EE48B /* AVFoundation.framework */; };
+		B0FC97F9191538E3006EE48B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC97F8191538E3006EE48B /* CoreData.framework */; };
+		B0FC97FB191538ED006EE48B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC97FA191538ED006EE48B /* CoreText.framework */; };
+		B0FC97FD191538F5006EE48B /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC97FC191538F5006EE48B /* GLKit.framework */; };
+		B0FC97FF191538FE006EE48B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC97FE191538FE006EE48B /* ImageIO.framework */; };
+		B0FC980119153908006EE48B /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC980019153908006EE48B /* libc++.dylib */; };
+		B0FC980319153915006EE48B /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC980219153915006EE48B /* libicucore.dylib */; };
+		B0FC98051915394B006EE48B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC98041915394B006EE48B /* libz.dylib */; };
+		B0FC980719153955006EE48B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC980619153955006EE48B /* OpenGLES.framework */; };
+		B0FC98091915395C006EE48B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC98081915395C006EE48B /* QuartzCore.framework */; };
+		B0FC980B19153967006EE48B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC980A19153967006EE48B /* SystemConfiguration.framework */; };
+		B0FC9811191542C2006EE48B /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FC9810191542C2006EE48B /* GoogleMaps.framework */; };
+		B0FC9813191542D8006EE48B /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0FC9812191542D8006EE48B /* GoogleMaps.bundle */; };
+		B0FC9818191556A1006EE48B /* MBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FC9817191556A1006EE48B /* MBUser.m */; };
+		B0FC981B19155771006EE48B /* MBLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B0FC981A19155771006EE48B /* MBLocation.m */; };
+		D8A4E970589745438FA21A67 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90211D15415B44B4ABB56361 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90211D15415B44B4ABB56361 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B036C3421909FC9200275B07 /* Mobster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mobster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B036C3451909FC9200275B07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B036C3471909FC9200275B07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +80,45 @@
 		B036C36C1909FC9200275B07 /* MobsterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobsterTests-Info.plist"; sourceTree = "<group>"; };
 		B036C36E1909FC9200275B07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B036C3701909FC9200275B07 /* MobsterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobsterTests.m; sourceTree = "<group>"; };
+		B036C37A1909FCBC00275B07 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		B036C37B1909FCBC00275B07 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		B036C37E1909FEB500275B07 /* MBMapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMapVC.h; sourceTree = "<group>"; };
+		B036C37F1909FEB500275B07 /* MBMapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMapVC.m; sourceTree = "<group>"; };
+		B036C3811909FEE800275B07 /* MBSuperVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSuperVC.h; sourceTree = "<group>"; };
+		B036C3821909FEE800275B07 /* MBSuperVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSuperVC.m; sourceTree = "<group>"; };
+		B036C3841909FF8900275B07 /* MBActionsMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBActionsMenuVC.h; sourceTree = "<group>"; };
+		B036C3851909FF8900275B07 /* MBActionsMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBActionsMenuVC.m; sourceTree = "<group>"; };
+		B036C3871909FFC000275B07 /* MBUserMenuVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUserMenuVC.h; sourceTree = "<group>"; };
+		B036C3881909FFC000275B07 /* MBUserMenuVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUserMenuVC.m; sourceTree = "<group>"; };
+		B036C38A190A022C00275B07 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B036C38C190A05B100275B07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B04BE6BB19156213005A5CDF /* MBSocketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSocketController.h; sourceTree = "<group>"; };
+		B04BE6BC19156213005A5CDF /* MBSocketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSocketController.m; sourceTree = "<group>"; };
+		B04BE6BE191564FC005A5CDF /* MBDefinitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBDefinitions.h; sourceTree = "<group>"; };
+		B04BE6BF1915ABAA005A5CDF /* YSShadedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSShadedButton.h; sourceTree = "<group>"; };
+		B04BE6C01915ABAA005A5CDF /* YSShadedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSShadedButton.m; sourceTree = "<group>"; };
+		B0D746851915F8A700592A6B /* MBChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatMessage.h; sourceTree = "<group>"; };
+		B0D746861915F8A700592A6B /* MBChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatMessage.m; sourceTree = "<group>"; };
+		B0D7468C1915FB4D00592A6B /* MBChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatTableViewCell.h; sourceTree = "<group>"; };
+		B0D7468D1915FB4D00592A6B /* MBChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatTableViewCell.m; sourceTree = "<group>"; };
+		B0FC97F6191538DC006EE48B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B0FC97F8191538E3006EE48B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B0FC97FA191538ED006EE48B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		B0FC97FC191538F5006EE48B /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		B0FC97FE191538FE006EE48B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B0FC980019153908006EE48B /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		B0FC980219153915006EE48B /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		B0FC98041915394B006EE48B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B0FC980619153955006EE48B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		B0FC98081915395C006EE48B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B0FC980A19153967006EE48B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B0FC9810191542C2006EE48B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		B0FC9812191542D8006EE48B /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		B0FC9816191556A1006EE48B /* MBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBUser.h; sourceTree = "<group>"; };
+		B0FC9817191556A1006EE48B /* MBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBUser.m; sourceTree = "<group>"; };
+		B0FC981919155771006EE48B /* MBLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLocation.h; sourceTree = "<group>"; };
+		B0FC981A19155771006EE48B /* MBLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBLocation.m; sourceTree = "<group>"; };
+		F618AD2047EA47048AE1A5F4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +126,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FC980B19153967006EE48B /* SystemConfiguration.framework in Frameworks */,
+				B0FC98091915395C006EE48B /* QuartzCore.framework in Frameworks */,
+				B0FC980719153955006EE48B /* OpenGLES.framework in Frameworks */,
+				B0FC98051915394B006EE48B /* libz.dylib in Frameworks */,
+				B0FC980319153915006EE48B /* libicucore.dylib in Frameworks */,
+				B0FC980119153908006EE48B /* libc++.dylib in Frameworks */,
+				B0FC97FF191538FE006EE48B /* ImageIO.framework in Frameworks */,
+				B0FC97FD191538F5006EE48B /* GLKit.framework in Frameworks */,
+				B0FC97FB191538ED006EE48B /* CoreText.framework in Frameworks */,
+				B0FC97F9191538E3006EE48B /* CoreData.framework in Frameworks */,
+				B0FC97F7191538DC006EE48B /* AVFoundation.framework in Frameworks */,
+				B036C38D190A05B100275B07 /* CoreLocation.framework in Frameworks */,
 				B036C3481909FC9200275B07 /* CoreGraphics.framework in Frameworks */,
 				B036C34A1909FC9200275B07 /* UIKit.framework in Frameworks */,
+				B0FC9811191542C2006EE48B /* GoogleMaps.framework in Frameworks */,
 				B036C3461909FC9200275B07 /* Foundation.framework in Frameworks */,
+				D8A4E970589745438FA21A67 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +166,7 @@
 				B036C36A1909FC9200275B07 /* MobsterTests */,
 				B036C3441909FC9200275B07 /* Frameworks */,
 				B036C3431909FC9200275B07 /* Products */,
+				F618AD2047EA47048AE1A5F4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +182,26 @@
 		B036C3441909FC9200275B07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0FC9812191542D8006EE48B /* GoogleMaps.bundle */,
+				B0FC9810191542C2006EE48B /* GoogleMaps.framework */,
+				B0FC980A19153967006EE48B /* SystemConfiguration.framework */,
+				B0FC98081915395C006EE48B /* QuartzCore.framework */,
+				B0FC980619153955006EE48B /* OpenGLES.framework */,
+				B0FC98041915394B006EE48B /* libz.dylib */,
+				B0FC980219153915006EE48B /* libicucore.dylib */,
+				B0FC980019153908006EE48B /* libc++.dylib */,
+				B0FC97FE191538FE006EE48B /* ImageIO.framework */,
+				B0FC97FC191538F5006EE48B /* GLKit.framework */,
+				B0FC97FA191538ED006EE48B /* CoreText.framework */,
+				B0FC97F8191538E3006EE48B /* CoreData.framework */,
+				B0FC97F6191538DC006EE48B /* AVFoundation.framework */,
+				B036C38C190A05B100275B07 /* CoreLocation.framework */,
+				B036C38A190A022C00275B07 /* MapKit.framework */,
 				B036C3451909FC9200275B07 /* Foundation.framework */,
 				B036C3471909FC9200275B07 /* CoreGraphics.framework */,
 				B036C3491909FC9200275B07 /* UIKit.framework */,
 				B036C3641909FC9200275B07 /* XCTest.framework */,
+				90211D15415B44B4ABB56361 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,9 +209,15 @@
 		B036C34B1909FC9200275B07 /* Mobster */ = {
 			isa = PBXGroup;
 			children = (
+				B04BE6BE191564FC005A5CDF /* MBDefinitions.h */,
 				B036C3541909FC9200275B07 /* MBAppDelegate.h */,
 				B036C3551909FC9200275B07 /* MBAppDelegate.m */,
+				B04BE6BB19156213005A5CDF /* MBSocketController.h */,
+				B04BE6BC19156213005A5CDF /* MBSocketController.m */,
 				B036C3571909FC9200275B07 /* Main.storyboard */,
+				B0D7468A1915FAA200592A6B /* ViewControllers */,
+				B0D746891915FA9000592A6B /* Model */,
+				B0D7468B1915FAC800592A6B /* Views */,
 				B036C35A1909FC9200275B07 /* MBViewController.h */,
 				B036C35B1909FC9200275B07 /* MBViewController.m */,
 				B036C35D1909FC9200275B07 /* Images.xcassets */,
@@ -152,6 +255,55 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B036C37D1909FCC000275B07 /* SWRevealVC */ = {
+			isa = PBXGroup;
+			children = (
+				B036C37A1909FCBC00275B07 /* SWRevealViewController.h */,
+				B036C37B1909FCBC00275B07 /* SWRevealViewController.m */,
+			);
+			name = SWRevealVC;
+			sourceTree = "<group>";
+		};
+		B0D746891915FA9000592A6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B0D746851915F8A700592A6B /* MBChatMessage.h */,
+				B0D746861915F8A700592A6B /* MBChatMessage.m */,
+				B0FC9816191556A1006EE48B /* MBUser.h */,
+				B0FC9817191556A1006EE48B /* MBUser.m */,
+				B0FC981919155771006EE48B /* MBLocation.h */,
+				B0FC981A19155771006EE48B /* MBLocation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B0D7468A1915FAA200592A6B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B036C3811909FEE800275B07 /* MBSuperVC.h */,
+				B036C3821909FEE800275B07 /* MBSuperVC.m */,
+				B036C37D1909FCC000275B07 /* SWRevealVC */,
+				B036C3871909FFC000275B07 /* MBUserMenuVC.h */,
+				B036C3881909FFC000275B07 /* MBUserMenuVC.m */,
+				B036C3841909FF8900275B07 /* MBActionsMenuVC.h */,
+				B036C3851909FF8900275B07 /* MBActionsMenuVC.m */,
+				B036C37E1909FEB500275B07 /* MBMapVC.h */,
+				B036C37F1909FEB500275B07 /* MBMapVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B0D7468B1915FAC800592A6B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0D7468C1915FB4D00592A6B /* MBChatTableViewCell.h */,
+				B0D7468D1915FB4D00592A6B /* MBChatTableViewCell.m */,
+				B04BE6BF1915ABAA005A5CDF /* YSShadedButton.h */,
+				B04BE6C01915ABAA005A5CDF /* YSShadedButton.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +311,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B036C3741909FC9200275B07 /* Build configuration list for PBXNativeTarget "Mobster" */;
 			buildPhases = (
+				07954E8F8EBD4D2ABD768674 /* Check Pods Manifest.lock */,
 				B036C33E1909FC9200275B07 /* Sources */,
 				B036C33F1909FC9200275B07 /* Frameworks */,
 				B036C3401909FC9200275B07 /* Resources */,
+				DD2906EF53E34EECBFEABB71 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +354,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = 2HC;
 				TargetAttributes = {
+					B036C3411909FC9200275B07 = {
+						DevelopmentTeam = BN2X5T48YN;
+					};
 					B036C3621909FC9200275B07 = {
 						TestTargetID = B036C3411909FC9200275B07;
 					};
@@ -232,6 +389,7 @@
 				B036C35E1909FC9200275B07 /* Images.xcassets in Resources */,
 				B036C3501909FC9200275B07 /* InfoPlist.strings in Resources */,
 				B036C3591909FC9200275B07 /* Main.storyboard in Resources */,
+				B0FC9813191542D8006EE48B /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,14 +403,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07954E8F8EBD4D2ABD768674 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DD2906EF53E34EECBFEABB71 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B036C33E1909FC9200275B07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04BE6C11915ABAA005A5CDF /* YSShadedButton.m in Sources */,
 				B036C3521909FC9200275B07 /* main.m in Sources */,
+				B0FC981B19155771006EE48B /* MBLocation.m in Sources */,
+				B036C3831909FEE800275B07 /* MBSuperVC.m in Sources */,
+				B036C3891909FFC000275B07 /* MBUserMenuVC.m in Sources */,
 				B036C35C1909FC9200275B07 /* MBViewController.m in Sources */,
+				B04BE6BD19156213005A5CDF /* MBSocketController.m in Sources */,
 				B036C3561909FC9200275B07 /* MBAppDelegate.m in Sources */,
+				B036C37C1909FCBC00275B07 /* SWRevealViewController.m in Sources */,
+				B0D7468E1915FB4D00592A6B /* MBChatTableViewCell.m in Sources */,
+				B036C3861909FF8900275B07 /* MBActionsMenuVC.m in Sources */,
+				B0FC9818191556A1006EE48B /* MBUser.m in Sources */,
+				B0D746871915F8A700592A6B /* MBChatMessage.m in Sources */,
+				B036C3801909FEB500275B07 /* MBMapVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,12 +576,21 @@
 		};
 		B036C3751909FC9200275B07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F618AD2047EA47048AE1A5F4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/yair/Developer/Frameworks/GoogleMaps-iOS-1.7.2",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mobster/Mobster-Prefix.pch";
 				INFOPLIST_FILE = "Mobster/Mobster-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -387,12 +598,21 @@
 		};
 		B036C3761909FC9200275B07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F618AD2047EA47048AE1A5F4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/yair/Developer/Frameworks/GoogleMaps-iOS-1.7.2",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mobster/Mobster-Prefix.pch";
 				INFOPLIST_FILE = "Mobster/Mobster-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +677,7 @@
 				B036C3761909FC9200275B07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B036C3771909FC9200275B07 /* Build configuration list for PBXNativeTarget "MobsterTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +686,7 @@
 				B036C3791909FC9200275B07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

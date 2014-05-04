@@ -8,6 +8,10 @@
 
 #import "MBSuperVC.h"
 
-@interface MBUserMenuVCViewController : MBSuperVC
+@class MBChatMessage;
+
+@interface MBUserMenuVC : MBSuperVC
+
+- (void) didReceiveChatMessage:(MBChatMessage *) chatMessage;
 
 @end

@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MBLocation.h"
 
 @interface MBUser : NSObject
+@property (strong,nonatomic) NSString * name;
+@property (strong,nonatomic) NSString * userID;
+/**
+ * Array containing history of the users locations.  Most Recent is the last object
+ **/
+@property (strong,nonatomic) NSMutableArray * locationHistory;
+@property (strong,nonatomic) MBLocation * currentLocation;
+@property (strong,nonatomic) NSURL * iconURL;
 
 @end
